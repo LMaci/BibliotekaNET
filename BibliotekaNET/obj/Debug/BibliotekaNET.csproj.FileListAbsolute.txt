@@ -1,0 +1,14 @@
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\BibliotekaNET.exe.config
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\BibliotekaNET.exe
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\BibliotekaNET.pdb
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\EntityFramework.dll
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\EntityFramework.SqlServer.dll
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\EntityFramework.xml
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\bin\Debug\EntityFramework.SqlServer.xml
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.csprojResolveAssemblyReference.cache
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.Form1.resources
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.Properties.Resources.resources
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.csproj.GenerateResource.Cache
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.csproj.CoreCompileInputs.cache
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.exe
+g:\Programy\Visual Studio repo\BibliotekaNET\BibliotekaNET\obj\Debug\BibliotekaNET.pdb
