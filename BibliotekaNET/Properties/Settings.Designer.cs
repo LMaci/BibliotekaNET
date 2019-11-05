@@ -33,16 +33,5 @@ namespace BibliotekaNET.Properties {
                 return ((string)(this["BibliotekaConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=lmaci.database.windows.net;Initial Catalog=Biblioteka;Persist Securit" +
-            "y Info=True;User ID=maci;Password=\"1939459989 Fe57a\"")]
-        public string StaryConnection {
-            get {
-                return ((string)(this["StaryConnection"]));
-            }
-        }
     }
 }

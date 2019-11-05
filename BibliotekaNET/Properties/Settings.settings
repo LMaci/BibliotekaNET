@@ -10,12 +10,5 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-G1V0L0G\SQLEXPRESS;Initial Catalog=Biblioteka;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="StaryConnection" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=lmaci.database.windows.net;Initial Catalog=Biblioteka;Persist Security Info=True;User ID=maci;Password="1939459989 Fe57a"&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=lmaci.database.windows.net;Initial Catalog=Biblioteka;Persist Security Info=True;User ID=maci;Password="1939459989 Fe57a"</Value>
-    </Setting>
   </Settings>
 </SettingsFile>
