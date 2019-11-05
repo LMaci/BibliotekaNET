@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotekaNET
@@ -39,14 +34,15 @@ namespace BibliotekaNET
             this.autorTableAdapter.Fill(this.bibliotekaDataSet.Autor);
             comboBox1.Text = null;
             comboBox2.Text = null;
-            this.ksiazkaTableAdapter.FillByAutor(this.bibliotekaDataSet.Ksiazka, -1);
-                this.wypozyczenieTableAdapter.FillByKsiazka(this.bibliotekaDataSet.Wypozyczenie, -1, -1);
+            ksiazkaTableAdapter.FillByAutor(this.bibliotekaDataSet.Ksiazka, -1);
+            wypozyczenieTableAdapter.FillByKsiazka(this.bibliotekaDataSet.Wypozyczenie, -1, -1);
 
         }
 
         public void Odswiez() // ODSWIEZ GRIDY
         {
             czytelnikBindingSource.DataSource = db.Czytelnik.ToArray();
+            czytelnikBindingSource1.DataSource = db.Czytelnik.ToArray();
             ksiazkaBindingSource.DataSource = db.Ksiazka.ToList();
             autorBindingSource.DataSource = db.Autor.ToList();
         }
@@ -66,14 +62,15 @@ namespace BibliotekaNET
             tbPesel.Text = aktualnyCzytelnik.PESEL;
             tbEmail.Text = aktualnyCzytelnik.Email;
             tbTelefon.Text = aktualnyCzytelnik.Telefon;
-
             try
             {
-                this.ksiazkaTableAdapter.FillBy2(this.bibliotekaDataSet.Ksiazka, aktualnyCzytelnik.ID);
+                ksiazkaTableAdapter.FillBy2(bibliotekaDataSet.Ksiazka, aktualnyCzytelnik.ID);
             }
             catch {}
 
-                this.wypozyczenieTableAdapter.FillByKsiazka(this.bibliotekaDataSet.Wypozyczenie, int.Parse(listBox1.SelectedValue.ToString()), aktualnyCzytelnik.ID);
+            if (db.Wypozyczenie.Any(x => x.Czytelnik_ID == aktualnyCzytelnik.ID))
+                wypozyczenieTableAdapter.FillByKsiazka(bibliotekaDataSet.Wypozyczenie, int.Parse(listBox1.SelectedValue.ToString()), aktualnyCzytelnik.ID);
+            Odswiez();
         }
 
         private void btAktualizuj_Click(object sender, EventArgs e) // AKTUALIZUJ CZYTELNIKA
@@ -111,6 +108,7 @@ namespace BibliotekaNET
                 Odswiez();
             }
             else MessageBox.Show("Sprawdź poprawność danych");
+            Odswiez();
         }
 
         private void button1_Click(object sender, EventArgs e) // USUN CZYTELNIKA
@@ -121,10 +119,11 @@ namespace BibliotekaNET
             {
                 try
                 {
+                    db.Wypozyczenie.RemoveRange(db.Wypozyczenie.Where(x => x.Czytelnik_ID == aktualnyCzytelnik.ID));
                     db.Czytelnik.Remove(aktualnyCzytelnik);
                     db.SaveChanges();
                 }
-                catch
+                    catch
                 {
                     MessageBox.Show("Niepoprawny wybór");
                 }
